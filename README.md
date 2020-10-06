@@ -1,20 +1,9 @@
-# simple
+# The documentation on how to write plugins for nuxt-ts seems to be outdated. This is a simple reproduction.
 
-## Build Setup
+This project was set up using [create-nuxt-app@latest](https://github.com/nuxt/create-nuxt-app). A plugin was added according and using the example code of the [Nuxt.js/TypeScript Cookbook](https://typescript.nuxtjs.org/cookbook/plugins.html#iii-combined-inject).
 
-```bash
-# install dependencies
-$ npm install
+How to reproduce the error message:
 
-# serve with hot reload at localhost:3000
-$ npm run dev
-
-# build for production and launch server
-$ npm run build
-$ npm run start
-
-# generate static project
-$ npm run generate
-```
-
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+1. Clone, install, etc.
+2. Open the start page [`pages/index.vue`](https://github.com/tillsanders/nuxt-ts-cookbook-error/blob/master/pages/index.vue) in your IDE (tested with VS Code)
+3. Take a look at line 35. You should see a Vetur warning for `$myInjectedFunction`: `Property '$myInjectedFunction' does not exist on type 'CombinedVueInstance<Vue, unknown, unknown, unknown, Readonly<Record<never, any>>>'.Vetur(2339)`
